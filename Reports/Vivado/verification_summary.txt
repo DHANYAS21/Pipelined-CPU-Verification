@@ -1,0 +1,69 @@
+﻿==================================================
+       OVERALL VERIFICATION SUMMARY
+       PIPELINED CPU
+==================================================
+
+PROJECT
+--------------------------------------------------
+Design             : Pipelined CPU
+Verification       : UVM + SystemVerilog Assertions
+Simulator          : Vivado 2026.1 / XSim
+Test               : cpu_full_test
+Simulation End     : 33415 ns
+
+VERIFICATION RESULTS
+--------------------------------------------------
+Programs Checked  : 60
+Programs Passed   : 60
+Programs Failed   : 0
+Assertion Failures: 0
+Final Result      : PASS
+
+UVM REPORT
+--------------------------------------------------
+UVM_INFO           : 16
+UVM_WARNING        : 0
+UVM_ERROR          : 0
+UVM_FATAL          : 0
+
+FUNCTIONAL COVERAGE
+--------------------------------------------------
+Defined Bins       : 10
+Bins Hit           : 10
+Functional Coverage: 100%
+Total Bin Hits     : 3343
+
+ASSERTION SUMMARY
+--------------------------------------------------
+Forwarding Checker: 4 assertions
+Hazard Checker    : 4 assertions
+Pipeline Checker  : 3 assertions
+Total Assertions  : 11
+Assertion Failures: 0
+
+VERIFICATION FEATURES
+--------------------------------------------------
+1. EX/MEM data forwarding
+2. MEM/WB data forwarding
+3. Forwarding priority
+4. Load-use hazard detection
+5. Pipeline stall and bubble checks
+6. Store data forwarding
+7. Load data write-back
+8. UVM scoreboard checking
+9. Functional coverage collection
+10. SystemVerilog assertion checking
+
+FINAL STATUS
+--------------------------------------------------
+UVM Regression     : PASS
+Functional Coverage: 10/10 bins hit
+Assertion Failures : 0
+Overall Result     : PASS
+
+LIMITATION
+--------------------------------------------------
+XSim does not support SVA cover property statements.
+RTL code coverage and toggle coverage are not claimed.
+
+==================================================

@@ -1,0 +1,32 @@
+==================================================
+       FUNCTIONAL COVERAGE REPORT
+       Pipelined CPU Verification
+==================================================
+
+Simulator       : Vivado 2026.1 / XSim
+Test            : cpu_full_test
+Coverage bins   : 10
+Bins hit        : 10
+Functional coverage: 100%
+Total bin hits  : 3343
+
+COVERPOINT / BIN                 HITS
+--------------------------------------------------
+FA = 00 (Register File)          1079
+FA = 01 (MEM/WB Forwarding)        97
+FA = 10 (EX/MEM Forwarding)        75
+FB = 00 (Register File)           601
+FB = 01 (MEM/WB Forwarding)        95
+FB = 10 (EX/MEM Forwarding)        73
+No Stall                         1207
+Load-Use Stall                     44
+Store Data Forwarded               52
+EX/MEM Priority                    20
+--------------------------------------------------
+TOTAL COVERAGE SAMPLES           3343
+
+Coverage represents defined UVM functional
+coverage bins, not RTL code coverage.
+
+RESULT: ALL 10 DEFINED BINS HIT
+==================================================

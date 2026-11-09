@@ -1,0 +1,33 @@
+﻿==================================================
+       DIRECTED TESTCASE RESULTS
+       PIPELINED CPU VERIFICATION
+==================================================
+
+TEST ID   TEST DESCRIPTION                         RESULT
+--------------------------------------------------
+T01       EX/MEM forwarding to rs1                 PASS
+T02       EX/MEM forwarding to rs2                 PASS
+T03       MEM/WB forwarding to rs1                  PASS
+T04       MEM/WB forwarding to rs2                  PASS
+T05       EX/MEM priority over MEM/WB               PASS
+T06       Load-use hazard on rs1                   PASS
+          Expected: 1 stall
+
+T07       Load-use hazard on rs1 and rs2           PASS
+          Expected: 1 stall
+
+T08       Load without dependent instruction       PASS
+          Expected: No stall
+
+T09       Store data forwarded from ALU            PASS
+
+T10       Load followed by store of loaded value   PASS
+          Expected: 1 stall
+
+--------------------------------------------------
+TOTAL TESTCASES : 10
+PASSED          : 10
+FAILED          : 0
+
+RESULT: ALL DIRECTED TESTCASES PASSED
+==================================================

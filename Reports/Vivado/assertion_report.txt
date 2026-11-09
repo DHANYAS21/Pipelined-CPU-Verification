@@ -1,0 +1,75 @@
+﻿==================================================
+          ASSERTION VERIFICATION REPORT
+          Pipelined CPU Verification
+==================================================
+
+Simulator       : Vivado 2026.1 / XSim
+Test            : cpu_full_test
+Total assertions: 11
+Assertion failures: 0
+
+--------------------------------------------------
+1. FORWARDING CHECKER (4 ASSERTIONS)
+--------------------------------------------------
+
+a_fa
+Checks correct forwarding selection for source rs1.
+
+a_fb
+Checks correct forwarding selection for source rs2.
+
+a_no_forward_rs1_x0
+Ensures register x0 is not forwarded for rs1.
+
+a_no_forward_rs2_x0
+Ensures register x0 is not forwarded for rs2.
+
+--------------------------------------------------
+2. HAZARD CHECKER (4 ASSERTIONS)
+--------------------------------------------------
+
+a_stall_on_load_use
+Checks that stall matches the load-use hazard condition.
+
+a_pc_hold
+Checks that the PC remains unchanged during a stall.
+
+a_bubble
+Checks that control signals are cleared after a stall.
+
+a_one_cycle
+Checks that the load-use stall lasts one cycle.
+
+--------------------------------------------------
+3. PIPELINE CHECKER (3 ASSERTIONS)
+--------------------------------------------------
+
+a_store_data
+Checks that the store writes the forwarded data.
+
+a_load_data
+Checks that loaded data reaches the write-back stage.
+
+a_no_early_use
+Checks that dependent instructions do not use load data
+before it becomes available.
+
+--------------------------------------------------
+FINAL REGRESSION EVIDENCE
+--------------------------------------------------
+
+Programs checked       : 60
+Programs failed        : 0
+Assertion failures     : 0
+Regression result      : PASS
+
+Note:
+Assertion failure status is based on the final regression
+failure counters and simulation log.
+
+XSim does not support SystemVerilog cover property
+statements. These cover statements were ignored.
+This does not invalidate the separate UVM functional
+coverage results.
+
+==================================================
