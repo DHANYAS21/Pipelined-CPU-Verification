@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="cpu_tb_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="cpu_pkg" />
+            <top_module name="cpu_tb_top" />
+            <top_module name="glbl" />
+            <top_module name="std" />
+            <top_module name="uvm_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,197.551 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="143"></NameColumnWidth>
+      <ValueColumnWidth column_width="127"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/cpu_tb_top/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb_top/imem" type="array">
+      <obj_property name="ElementShortName">imem[0:255][31:0]</obj_property>
+      <obj_property name="ObjectShortName">imem[0:255][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb_top/dmem" type="array">
+      <obj_property name="ElementShortName">dmem[0:255][31:0]</obj_property>
+      <obj_property name="ObjectShortName">dmem[0:255][31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb_top/pc" type="array">
+      <obj_property name="ElementShortName">pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb_top/instr" type="array">
+      <obj_property name="ElementShortName">instr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instr[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb_top/dmem_addr" type="array">
+      <obj_property name="ElementShortName">dmem_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dmem_addr[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb_top/dmem_wdata" type="array">
+      <obj_property name="ElementShortName">dmem_wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dmem_wdata[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb_top/dmem_rdata" type="array">
+      <obj_property name="ElementShortName">dmem_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dmem_rdata[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb_top/wb_data" type="array">
+      <obj_property name="ElementShortName">wb_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_data[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb_top/dmem_read" type="logic">
+      <obj_property name="ElementShortName">dmem_read</obj_property>
+      <obj_property name="ObjectShortName">dmem_read</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb_top/dmem_write" type="logic">
+      <obj_property name="ElementShortName">dmem_write</obj_property>
+      <obj_property name="ObjectShortName">dmem_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb_top/wb_en" type="logic">
+      <obj_property name="ElementShortName">wb_en</obj_property>
+      <obj_property name="ObjectShortName">wb_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb_top/wb_rd" type="array">
+      <obj_property name="ElementShortName">wb_rd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_rd[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cpu_tb_top/dmem_off" type="array">
+      <obj_property name="ElementShortName">dmem_off[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dmem_off[31:0]</obj_property>
+   </wvobject>
+</wave_config>

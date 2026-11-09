@@ -1,0 +1,64 @@
+Time resolution is 1 ps
+UVM_INFO D:/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test cpu_full_test...
+UVM_INFO D:/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+UVM_INFO D:/CURRENT WORKING DIREVTORY/cpu_scoreboard.sv(140) @ 175000: uvm_test_top.env.sb [SB] PASS T01                    EX/MEM forwarding to rs1 stalls=0 forwards=1
+UVM_INFO D:/CURRENT WORKING DIREVTORY/cpu_scoreboard.sv(140) @ 355000: uvm_test_top.env.sb [SB] PASS T02                    EX/MEM forwarding to rs2 stalls=0 forwards=1
+UVM_INFO D:/CURRENT WORKING DIREVTORY/cpu_scoreboard.sv(140) @ 555000: uvm_test_top.env.sb [SB] PASS T03                    MEM/WB forwarding to rs1 stalls=0 forwards=1
+UVM_INFO D:/CURRENT WORKING DIREVTORY/cpu_scoreboard.sv(140) @ 755000: uvm_test_top.env.sb [SB] PASS T04                    MEM/WB forwarding to rs2 stalls=0 forwards=1
+UVM_INFO D:/CURRENT WORKING DIREVTORY/cpu_scoreboard.sv(140) @ 955000: uvm_test_top.env.sb [SB] PASS T05             EX/MEM has priority over MEM/WB stalls=0 forwards=2
+UVM_INFO D:/CURRENT WORKING DIREVTORY/cpu_scoreboard.sv(140) @ 1175000: uvm_test_top.env.sb [SB] PASS T06                  Load-use on rs1 -> 1 stall stalls=1 forwards=2
+UVM_INFO D:/CURRENT WORKING DIREVTORY/cpu_scoreboard.sv(140) @ 1395000: uvm_test_top.env.sb [SB] PASS T07          Load-use on rs1 and rs2 -> 1 stall stalls=1 forwards=3
+UVM_INFO D:/CURRENT WORKING DIREVTORY/cpu_scoreboard.sv(140) @ 1615000: uvm_test_top.env.sb [SB] PASS T08          Load with no dependent -> no stall stalls=0 forwards=1
+UVM_INFO D:/CURRENT WORKING DIREVTORY/cpu_scoreboard.sv(140) @ 1815000: uvm_test_top.env.sb [SB] PASS T09               Store data forwarded from ALU stalls=0 forwards=1
+UVM_INFO D:/CURRENT WORKING DIREVTORY/cpu_scoreboard.sv(140) @ 2055000: uvm_test_top.env.sb [SB] PASS T10  Load then store of loaded value -> 1 stall stalls=1 forwards=2
+UVM_INFO D:/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(19968) @ 33415000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO D:/CURRENT WORKING DIREVTORY/cpu_coverage.sv(52) @ 33415000: uvm_test_top.env.cov [COV] 10/10 bins hit
+      FA = 00 (reg file)   1079           
+        FA = 01 (MEM/WB)     97           
+        FA = 10 (EX/MEM)     75           
+      FB = 00 (reg file)    601           
+        FB = 01 (MEM/WB)     95           
+        FB = 10 (EX/MEM)     73           
+                no stall   1207           
+          load-use stall     44           
+    store data forwarded     52           
+         EX/MEM priority     20           
+UVM_INFO D:/CURRENT WORKING DIREVTORY/cpu_scoreboard.sv(149) @ 33415000: uvm_test_top.env.sb [SB] 60 programs checked, 0 failed, 0 assertion failures
+==== RESULT: PASS
+UVM_INFO D:/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(13673) @ 33415000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   16
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[COV]     1
+[RNTST]     1
+[SB]    11
+[TEST_DONE]     1
+[UVM/COMP/NAMECHECK]     1
+[UVM/RELNOTES]     1
+
+$finish called at time : 33415 ns : File "D:/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
