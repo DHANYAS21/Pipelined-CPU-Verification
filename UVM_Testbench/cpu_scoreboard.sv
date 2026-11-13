@@ -129,13 +129,31 @@ class cpu_scoreboard extends uvm_scoreboard;
                 err(p, $sformatf("x%0d = %0d expected %0d", r, $signed(bfm.read_reg(r)), $signed(regs[r])));
 
         n_checked++;
-        if (errs == 0) begin
-            for (int i = 0; i < n; i++) begin
-                cpu_hz_item h = cpu_hz_item::type_id::create("h");
-                h.fa = exp_fa[i]; h.fb = exp_fb[i]; h.uses_rs2 = p.instrs[i].uses_rs2();
-                h.stall = exp_stall[i]; h.is_sw = (p.instrs[i].op == OP_SW); h.prio = exp_prio[i];
-                cov_ap.write(h);
-            end
+       if (errs == 0) begin
+    for (int i = 0; i < n; i++) begin
+        cpu_hz_item h = cpu_hz_item::type_id::create("h");
+
+        h.fa = exp_fa[i];
+        h.fb = exp_fb[i];
+        h.uses_rs2 = p.instrs[i].uses_rs2();
+        h.stall = exp_stall[i];
+        h.is_sw = (p.instrs[i].op == OP_SW);
+        h.prio = exp_prio[i];
+
+        // Detect dependencies on the immediately preceding load
+        h.hazard_rs1 = (i > 0 &&
+                        p.instrs[i-1].op == OP_LW &&
+                        p.instrs[i-1].rd != 0 &&
+                        p.instrs[i].rs1 == p.instrs[i-1].rd);
+
+        h.hazard_rs2 = (i > 0 &&
+                        p.instrs[i-1].op == OP_LW &&
+                        p.instrs[i-1].rd != 0 &&
+                        p.instrs[i].uses_rs2() &&
+                        p.instrs[i].rs2 == p.instrs[i-1].rd);
+
+        cov_ap.write(h);
+    end
             if (p.id[0] == "T")
                 `uvm_info("SB", $sformatf("PASS %s  %-42s stalls=%0d forwards=%0d", p.id, p.descr, stalls, fwds), UVM_NONE)
         end else begin

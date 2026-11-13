@@ -94,7 +94,8 @@ endclass
 class cpu_hz_item extends uvm_sequence_item;
     `uvm_object_utils(cpu_hz_item)
     int fa, fb;
-    bit uses_rs2, stall, is_sw, prio;
+   bit uses_rs2, stall, is_sw, prio;
+bit hazard_rs1, hazard_rs2;
     function new(string name = "cpu_hz_item");
         super.new(name);
     endfunction
